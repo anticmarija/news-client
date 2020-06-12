@@ -33,6 +33,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@testing-library/react": "^9.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
@@ -48,9 +50,14 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "*.{js,jsx}": [
       "yarn lint:fix",
-      "prettier --write"
+      "prettier --write",
+      "git add"
+    ],
+    "*.{md}": [
+      "prettier --write",
+      "git add"
     ]
   },
   "jest": {
