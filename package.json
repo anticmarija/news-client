@@ -41,18 +41,17 @@
     "lint-staged": "^10.2.10",
     "prettier": "^2.0.5"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "yarn lint:fix",
-      "prettier --write",
-      "git add"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
       "pre-push": "yarn test"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "yarn lint:fix",
+      "prettier --write"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
