@@ -45,7 +45,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged",
       "pre-push": "yarn test"
     }
@@ -53,10 +53,10 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "yarn lint:fix",
-      "prettier --write",
+      "prettier --write"
     ],
     "*.{md}": [
-      "prettier --write",
+      "prettier --write"
     ]
   },
   "jest": {
