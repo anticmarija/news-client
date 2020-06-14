@@ -13,13 +13,13 @@ const config = {
   },
   getCategories() {
     return [
-      "business",
-      "entertainment",
-      "general",
-      "health",
-      "science",
-      "sports",
-      "technology",
+      "Business",
+      "Entertainment",
+      "General",
+      "Health",
+      "Science",
+      "Sports",
+      "Technology",
     ];
   },
 };

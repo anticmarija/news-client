@@ -39,7 +39,7 @@ function App() {
           />
           <Route
             path={`/country/${activeCountry}/categories`}
-            render={Categories}
+            render={() => <Categories />}
           />
           <Route path={`/country/${activeCountry}/search`} render={Search} />
           <Route
