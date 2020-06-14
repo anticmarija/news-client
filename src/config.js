@@ -11,6 +11,17 @@ const config = {
       : "gb,us";
     return countries.split(",");
   },
+  getCategories() {
+    return [
+      "business",
+      "entertainment",
+      "general",
+      "health",
+      "science",
+      "sports",
+      "technology",
+    ];
+  },
 };
 
 export default config;

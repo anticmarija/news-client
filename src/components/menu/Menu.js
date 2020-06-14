@@ -10,8 +10,8 @@ const Menu = () => {
   return (
     <div>
       <Link to={`/country/${activeCountry}/`}>Top news</Link>
-      <Link>Categories</Link>
-      <Link>Search</Link>
+      <Link to={`/country/${activeCountry}/categories`}>Categories</Link>
+      <Link to={`/country/${activeCountry}/search`}>Search</Link>
       {supportedCountries.map((country) => (
         <Link key={country} to={`/country/${country}/`}>
           {country.toUpperCase()}

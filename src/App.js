@@ -11,15 +11,19 @@ import Article from "./components/article/Article";
 import config from "./config";
 import { useDispatch, useSelector } from "react-redux";
 import { setCountries } from "./store/actions/countries.actions";
+import { setCategories } from "./store/actions/categories.actions";
 
 function App() {
-  //TODO - select active country from state
   const dispatch = useDispatch();
   const { activeCountry } = useSelector((state) => state.countries);
 
   useEffect(() => {
     const countries = config.getCountries();
+    const categories = config.getCategories();
+
     dispatch(setCountries(countries));
+    dispatch(setCategories(categories));
+
     // eslint-disable-next-line
   }, []);
 
@@ -31,15 +35,15 @@ function App() {
           <Route
             exact
             path="/"
-            render={() => <Redirect to={`country/${activeCountry}`} />}
+            render={() => <Redirect to={`/country/${activeCountry}`} />}
           />
           <Route
-            path={`country/${activeCountry}/categories`}
+            path={`/country/${activeCountry}/categories`}
             render={Categories}
           />
-          <Route path={`country/${activeCountry}/search`} render={Search} />
+          <Route path={`/country/${activeCountry}/search`} render={Search} />
           <Route
-            path={`country/${activeCountry}/articles/:articleId`}
+            path={`/country/${activeCountry}/articles/:articleId`}
             render={Article}
           />
           <Route path="/country/:countryId" render={TopNews} />
