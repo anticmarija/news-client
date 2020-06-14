@@ -31,11 +31,13 @@ const topNewsReducer = (state, action) => {
       return {
         ...state,
         articles: action.payload,
+        loading: false,
       };
     case FETCH_ARTICLES_FAIL:
       return {
         ...state,
         error: action.payload,
+        loading: false,
       };
     default:
       return state;

@@ -1,4 +1,7 @@
-import { SET_COUNTRIES } from "../actions/countries.actions";
+import {
+  SET_COUNTRIES,
+  SET_ACTIVE_COUNTRY,
+} from "../actions/countries.actions";
 
 export const initialState = {
   supportedCountries: [],
@@ -21,6 +24,12 @@ const countriesReducer = (state, action) => {
       return {
         ...state,
         supportedCountries: action.payload,
+        activeCountry: action.payload[0],
+      };
+    case SET_ACTIVE_COUNTRY:
+      return {
+        ...state,
+        activeCountry: action.payload,
       };
     default:
       return state;
