@@ -6,3 +6,11 @@ export const findNewRoute = (pathname, selectedCountry) => {
 
   return routeArray.join("/");
 };
+
+export const findActiveCountryName = (supportedCountries, activeCountry) => {
+  const { countryName } = supportedCountries.find(
+    ({ countryId }) => countryId === activeCountry
+  );
+
+  return countryName;
+};
