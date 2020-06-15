@@ -1,22 +1,13 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { findNewRoute } from "../../utils/helpers";
 
 const Menu = () => {
   const { supportedCountries, activeCountry } = useSelector(
     (state) => state.countries
   );
-
   const { pathname } = useLocation();
-
-  const findNewRoute = (pathname, selectedCountry) => {
-    const routeArray = pathname.split("/");
-    // Country ID is after 'country'
-    const countryIdRouteIndex = routeArray.indexOf("country") + 1;
-    routeArray[countryIdRouteIndex] = selectedCountry;
-
-    return routeArray.join("/");
-  };
 
   return (
     <div>
