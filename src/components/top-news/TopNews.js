@@ -14,8 +14,6 @@ const TopNews = () => {
   useEffect(() => {
     dispatch(fetchArticles(countryId));
     dispatch(setActiveCountry(countryId));
-
-    // eslint-disable-next-line
   }, [countryId]);
 
   return (

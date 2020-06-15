@@ -16,8 +16,7 @@ const Categories = () => {
 
   useEffect(() => {
     dispatch(fetchTop5ArticlesPerCategory(activeCountry, supportedCategories));
-    // eslint-disable-next-line
-  }, [activeCountry]);
+  }, [activeCountry, supportedCategories]);
 
   return loadingCategories ? (
     "loading...."
