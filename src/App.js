@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 
-import { Route, Switch, withRouter, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import Menu from "./components/menu/Menu";
 import TopNews from "./components/top-news/TopNews";
@@ -12,6 +12,7 @@ import config from "./config";
 import { useDispatch, useSelector } from "react-redux";
 import { setCountries } from "./store/actions/countries.actions";
 import { setCategories } from "./store/actions/categories.actions";
+import Category from "./components/category/Category";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,25 +33,28 @@ function App() {
       <div className="App">
         <Menu />
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => <Redirect to={`/country/${activeCountry}`} />}
-          />
-          <Route
-            path={`/country/${activeCountry}/categories`}
-            render={() => <Categories />}
-          />
-          <Route path={`/country/${activeCountry}/search`} render={Search} />
-          <Route
-            path={`/country/${activeCountry}/articles/:articleId`}
-            render={Article}
-          />
-          <Route path="/country/:countryId" render={TopNews} />
+          <Route exact path="/">
+            <Redirect to={`/country/${activeCountry}`} />
+          </Route>
+          <Route path={`/country/${activeCountry}/categories/:categoryName`}>
+            <Category />
+          </Route>
+          <Route path={`/country/${activeCountry}/categories`}>
+            <Categories />
+          </Route>
+          <Route path={`/country/${activeCountry}/search`}>
+            <Search />
+          </Route>
+          <Route path={`/country/${activeCountry}/articles/:articleId`}>
+            <Article />
+          </Route>
+          <Route path="/country/:countryId">
+            <TopNews />
+          </Route>
         </Switch>
       </div>
     )
   );
 }
 
-export default withRouter(App);
+export default App;

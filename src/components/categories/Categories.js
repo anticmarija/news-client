@@ -1,15 +1,46 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTop5ArticlesPerCategory } from "../../store/actions/categories.actions";
+import CategoriesThumbnail from "../categories-thumbnail/CategoriesThumbnail";
+import { Link } from "react-router-dom";
 
 const Categories = () => {
-  const { supportedCategories } = useSelector((state) => state.categories);
+  const {
+    supportedCategories,
+    categoryArticles,
+    loadingCategories,
+  } = useSelector((state) => state.categories);
 
-  return (
+  let { activeCountry } = useSelector((state) => state.countries);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTop5ArticlesPerCategory(activeCountry, supportedCategories));
+    // eslint-disable-next-line
+  }, [activeCountry]);
+
+  return loadingCategories ? (
+    "loading...."
+  ) : (
     <div>
-      categories
-      {supportedCategories.map((category) => (
-        <h1 key={category}>{category}</h1>
-      ))}
+      <h1>Categories</h1>
+      {Object.keys(categoryArticles).map((category) => {
+        return (
+          <div key={category}>
+            <Link
+              to={`/country/${activeCountry}/categories/${category.toLowerCase()}`}
+            >
+              <h2 key={category}>{category}</h2>
+            </Link>
+            {categoryArticles[category].map((article) => (
+              <CategoriesThumbnail
+                key={`${article.title}_${article.publishedAt}`}
+                article={article}
+              />
+            ))}
+          </div>
+        );
+      })}
     </div>
   );
 };
