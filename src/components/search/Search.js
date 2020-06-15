@@ -21,6 +21,8 @@ const Search = () => {
   const [searchingTerm, setSearchingTerm] = useState("");
   const [resultArticles, setResultArticles] = useState([]);
 
+  const [isNthMatched, setIsNthMatched] = useState(false);
+
   const debouncedSearchTerm = useDebounce(searchingTerm, 500);
 
   useEffect(() => {
@@ -31,6 +33,8 @@ const Search = () => {
 
         setSearchingStatus(false);
         setResultArticles(articles);
+
+        setIsNthMatched(articles.length === 0);
       };
 
       asyncApiCall();
@@ -47,6 +51,7 @@ const Search = () => {
         onChange={(event) => setSearchingTerm(event.target.value)}
       ></input>
       {searchingStatus && <p>Searching...</p>}
+      {isNthMatched && <p>No matches!</p>}
       {resultArticles.map((article) => (
         <Thumbnail
           key={`${article.title}_${article.publishedAt}`}
