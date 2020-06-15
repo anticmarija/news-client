@@ -16,6 +16,7 @@ const Category = () => {
 
   useEffect(() => {
     dispatch(fetchAllArticlesPerCategory(activeCountry, categoryName));
+    // eslint-disable-next-line
   }, [activeCountry, categoryName]);
 
   return (
