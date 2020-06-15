@@ -10,7 +10,7 @@ const CategoriesThumbnail = ({ article }) => {
   return (
     <div>
       <Link to={`/country/${activeCountry}/articles/some-article-id`}>
-        <h1>{title}</h1>
+        <h3>{title}</h3>
         <img alt={title} src={urlToImage} />
       </Link>
     </div>

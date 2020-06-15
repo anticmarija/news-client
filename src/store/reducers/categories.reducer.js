@@ -4,12 +4,18 @@ import {
   FETCH_TOP_5_ARTICLES_PER_CATEGORY_FAIL,
   FETCH_TOP_5_ARTICLES_PER_CATEGORY_SUCCESS,
   FETCH_TOP_5_ARTICLES_PER_CATEGORY_START,
+  FETCH_ALL_ARTICLES_PER_CATEGORY_START,
+  FETCH_ALL_ARTICLES_PER_CATEGORY_SUCCESS,
+  FETCH_ALL_ARTICLES_PER_CATEGORY_FAIL,
 } from "../actions/categories.actions";
 
 export const initialState = {
   supportedCategories: [],
   categoryArticles: {},
   loadingCategories: true,
+  allCategoryArticles: [],
+  loadingAllCategoryArticles: true,
+  error: null,
 };
 
 /**
@@ -52,6 +58,23 @@ const categoriesReducer = (state, action) => {
       return {
         ...state,
         loadingCategories: false,
+      };
+    case FETCH_ALL_ARTICLES_PER_CATEGORY_START:
+      return {
+        ...state,
+        loadingAllCategoryArticles: true,
+      };
+    case FETCH_ALL_ARTICLES_PER_CATEGORY_SUCCESS:
+      return {
+        ...state,
+        allCategoryArticles: action.payload,
+        loadingAllCategoryArticles: false,
+      };
+    case FETCH_ALL_ARTICLES_PER_CATEGORY_FAIL:
+      return {
+        ...state,
+        error: action.payload,
+        loadingAllCategoryArticles: false,
       };
     default:
       return state;

@@ -11,6 +11,13 @@ export const FETCH_TOP_5_ARTICLES_PER_CATEGORY_FAIL =
 export const FETCH_TOP_5_ARTICLES_PER_CATEGORY_DONE =
   "FETCH_TOP_5_ARTICLES_PER_CATEGORY_DONE";
 
+export const FETCH_ALL_ARTICLES_PER_CATEGORY_START =
+  "FETCH_ALL_ARTICLES_PER_CATEGORY_START";
+export const FETCH_ALL_ARTICLES_PER_CATEGORY_SUCCESS =
+  "FETCH_ALL_ARTICLES_PER_CATEGORY_SUCCESS";
+export const FETCH_ALL_ARTICLES_PER_CATEGORY_FAIL =
+  "FETCH_ALL_ARTICLES_PER_CATEGORY_FAIL";
+
 /**
  * Action creators
  */
@@ -39,8 +46,23 @@ export const fetchTop5ArticlesPerCategoryFail = (error) => {
   return { type: FETCH_TOP_5_ARTICLES_PER_CATEGORY_FAIL, payload: error };
 };
 
+export const fetchAllArticlesPerCategoryStart = () => {
+  return { type: FETCH_ALL_ARTICLES_PER_CATEGORY_START };
+};
+
+export const fetchAllArticlesPerCategorySuccess = (allCategoryArticles) => {
+  return {
+    type: FETCH_ALL_ARTICLES_PER_CATEGORY_SUCCESS,
+    payload: allCategoryArticles,
+  };
+};
+
+export const fetchAllArticlesPerCategoryFail = (error) => {
+  return { type: FETCH_ALL_ARTICLES_PER_CATEGORY_FAIL, payload: error };
+};
+
 /**
- * Fetches ARTICLES by each category and dispatches success and error actions
+ * Fetches top 5 ARTICLES by each category and dispatches success and error actions
  */
 export const fetchTop5ArticlesPerCategory = (countryId, categories) => {
   return async (dispatch) => {
@@ -71,6 +93,27 @@ export const fetchTop5ArticlesPerCategory = (countryId, categories) => {
       });
     } catch (err) {
       dispatch(fetchTop5ArticlesPerCategoryFail(err));
+    }
+  };
+};
+
+/**
+ * Fetches all ARTICLES by category and dispatches success and error actions
+ */
+export const fetchAllArticlesPerCategory = (countryId, category) => {
+  return async (dispatch) => {
+    try {
+      dispatch(fetchAllArticlesPerCategoryStart());
+
+      const response = await fetch(
+        `${config.getApiBaseUrl()}/top-headlines?country=${countryId}&category=${category}&apiKey=${config.getApiKey()}`
+      );
+
+      const { articles } = await response.json();
+
+      dispatch(fetchAllArticlesPerCategorySuccess(articles));
+    } catch (err) {
+      dispatch(fetchAllArticlesPerCategoryFail(err));
     }
   };
 };
