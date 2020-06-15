@@ -14,9 +14,10 @@ const Menu = () => {
       <Link to={`/country/${activeCountry}/`}>Top news </Link>
       <Link to={`/country/${activeCountry}/categories`}> Categories</Link>
       <Link to={`/country/${activeCountry}/search`}> Search </Link>
-      {supportedCountries.map((country) => (
-        <Link key={country} to={findNewRoute(pathname, country)}>
-          {country.toUpperCase() + " "}
+
+      {supportedCountries.map(({ countryId }) => (
+        <Link key={countryId} to={findNewRoute(pathname, countryId)}>
+          {countryId.toUpperCase() + " "}
         </Link>
       ))}
     </div>

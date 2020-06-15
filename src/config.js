@@ -6,10 +6,10 @@ const config = {
     return process.env.REACT_APP_API_BASE_URL;
   },
   getCountries() {
-    const countries = process.env.REACT_APP_COUNTRIES
-      ? process.env.REACT_APP_COUNTRIES
-      : "gb,us";
-    return countries.split(",");
+    return [
+      { countryId: "gb", countryName: "Great Britain" },
+      { countryId: "us", countryName: "United States" },
+    ];
   },
   getCategories() {
     return [
