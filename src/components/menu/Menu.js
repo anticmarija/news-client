@@ -27,17 +27,19 @@ const Menu = () => {
   return (
     <MenuWrapperStyle>
       <MenuItemsWrapperStyle>
-        <MenuItemStyle>
+        <MenuItemStyle active={pathname === `/country/${activeCountry}/`}>
           <LinkStyle exact to={`/country/${activeCountry}/`}>
             Top news
           </LinkStyle>
         </MenuItemStyle>
-        <MenuItemStyle>
+        <MenuItemStyle
+          active={pathname === `/country/${activeCountry}/categories`}
+        >
           <LinkStyle exact to={`/country/${activeCountry}/categories`}>
             Categories
           </LinkStyle>
         </MenuItemStyle>
-        <MenuItemStyle>
+        <MenuItemStyle active={pathname === `/country/${activeCountry}/search`}>
           <LinkStyle exact to={`/country/${activeCountry}/search`}>
             Search
           </LinkStyle>
@@ -46,10 +48,10 @@ const Menu = () => {
 
       <MenuCountriesWrapperStyle>
         {supportedCountries.map(({ countryId }) => (
-          <MenuItemStyle key={countryId}>
+          <MenuItemStyle active={pathname.includes(countryId)} key={countryId}>
             <LinkStyle
               onClick={() => handleChangeCountry(countryId)}
-              active={activeCountry === countryId}
+              active={activeCountry === countryId ? "active" : ""}
               to={findNewRoute(pathname, countryId)}
             >
               {countryId.toUpperCase() + " "}

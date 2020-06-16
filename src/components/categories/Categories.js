@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchTop5ArticlesPerCategory } from "../../store/actions/categories.actions";
 import CategoriesThumbnail from "../categories-thumbnail/CategoriesThumbnail";
 import { Link } from "react-router-dom";
+import Loader from "../loader/Loader";
 
 const Categories = () => {
   const {
@@ -20,7 +21,7 @@ const Categories = () => {
   }, [activeCountry, supportedCategories]);
 
   return loadingCategories ? (
-    "loading...."
+    <Loader />
   ) : (
     <div>
       <h1>Categories</h1>

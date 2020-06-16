@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllArticlesPerCategory } from "../../store/actions/categories.actions";
 import Thumbnail from "../thumbnail/Thumbnail";
+import Loader from "../loader/Loader";
 
 const Category = () => {
   let { activeCountry } = useSelector((state) => state.countries);
@@ -23,7 +24,7 @@ const Category = () => {
     <div>
       Category {categoryName.toUpperCase()}
       {loadingAllCategoryArticles ? (
-        "Loading...."
+        <Loader />
       ) : (
         <div>
           {allCategoryArticles.map((article) => (

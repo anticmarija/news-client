@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 export const MenuWrapperStyle = styled.div`
   width: 100%;
-  border-bottom: 1px solid grey;
   height: 50px;
   display: flex;
+  background-color: #e7e9ec;
 `;
 
 export const MenuItemsWrapperStyle = styled.div`
@@ -16,10 +16,14 @@ export const MenuItemsWrapperStyle = styled.div`
 
 export const MenuItemStyle = styled.div`
   height: 100%;
-  background-color: darkgrey;
+  background-color: ${(props) => (props.active ? "#282c34" : "transparent")};
   display: flex;
   align-items: center;
   padding: 0 12px;
+
+  &:hover {
+    background-color: ${(props) => (props.active ? "#282c34" : "#d4deee")};
+  }
 
   a {
     text-decoration: none;
@@ -30,7 +34,7 @@ export const MenuItemStyle = styled.div`
 
 export const LinkStyle = styled(NavLink)`
   &.active {
-    color: red;
+    color: #ffffff;
   }
 `;
 
