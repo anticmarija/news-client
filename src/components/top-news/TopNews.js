@@ -1,25 +1,23 @@
 import React, { useEffect } from "react";
-import { useParams, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchArticles } from "../../store/actions/top-news.actions";
 import Thumbnail from "../thumbnail/Thumbnail";
-import { setActiveCountry } from "../../store/actions/countries.actions";
 
 const TopNews = () => {
-  let { countryId } = useParams();
-
   const { articles, loading } = useSelector((state) => state.topNews);
   const dispatch = useDispatch();
 
+  const { activeCountry } = useSelector((state) => state.countries);
+
   useEffect(() => {
-    dispatch(fetchArticles(countryId));
-    dispatch(setActiveCountry(countryId));
+    dispatch(fetchArticles(activeCountry));
     // eslint-disable-next-line
-  }, [countryId]);
+  }, [activeCountry]);
 
   return (
     <div>
-      top news {countryId}
+      top news {activeCountry}
       {loading ? (
         "Loading...."
       ) : (

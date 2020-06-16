@@ -28,6 +28,7 @@ const Search = () => {
   useEffect(() => {
     if (debouncedSearchTerm) {
       setSearchingStatus(true);
+      setIsNthMatched(false);
       const asyncApiCall = async () => {
         const articles = await apiHandler(activeCountry, debouncedSearchTerm);
 
@@ -39,7 +40,7 @@ const Search = () => {
 
       asyncApiCall();
     }
-  }, [debouncedSearchTerm]);
+  }, [debouncedSearchTerm, activeCountry]);
 
   const countryName = findActiveCountryName(supportedCountries, activeCountry);
 

@@ -27,7 +27,6 @@ const countriesReducer = (state, action) => {
       return {
         ...state,
         supportedCountries: action.payload,
-        activeCountry: action.payload[0].countryId,
       };
     case SET_ACTIVE_COUNTRY:
       return {
