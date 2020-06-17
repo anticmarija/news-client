@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchAllArticlesPerCategory } from "../../store/actions/categories.actions";
 import Thumbnail from "../thumbnail/Thumbnail";
 import Loader from "../loader/Loader";
+import { MainHeaderStyle, NewsWrapperStyle } from "../../style/Shared.style";
+import { capitalize } from "../../utils/helpers";
 
 const Category = () => {
   let { activeCountry } = useSelector((state) => state.countries);
@@ -22,18 +24,18 @@ const Category = () => {
 
   return (
     <div>
-      Category {categoryName.toUpperCase()}
+      <MainHeaderStyle>Category {capitalize(categoryName)}</MainHeaderStyle>
       {loadingAllCategoryArticles ? (
         <Loader />
       ) : (
-        <div>
+        <NewsWrapperStyle>
           {allCategoryArticles.map((article) => (
             <Thumbnail
               key={`${article.title}_${article.publishedAt}`}
               article={article}
             />
           ))}
-        </div>
+        </NewsWrapperStyle>
       )}
     </div>
   );

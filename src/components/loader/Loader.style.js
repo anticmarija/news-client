@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const LoaderWrapperStyle = styled.div`
   width: 100%;

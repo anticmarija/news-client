@@ -4,6 +4,8 @@ import { fetchTop5ArticlesPerCategory } from "../../store/actions/categories.act
 import CategoriesThumbnail from "../categories-thumbnail/CategoriesThumbnail";
 import { Link } from "react-router-dom";
 import Loader from "../loader/Loader";
+import { CategoriesWrapperStyle } from "./Categories.style";
+import { MainHeaderStyle } from "../../style/Shared.style";
 
 const Categories = () => {
   const {
@@ -23,8 +25,8 @@ const Categories = () => {
   return loadingCategories ? (
     <Loader />
   ) : (
-    <div>
-      <h1>Categories</h1>
+    <CategoriesWrapperStyle>
+      <MainHeaderStyle>Categories</MainHeaderStyle>
       {Object.keys(categoryArticles).map((category) => {
         return (
           <div key={category}>
@@ -42,7 +44,7 @@ const Categories = () => {
           </div>
         );
       })}
-    </div>
+    </CategoriesWrapperStyle>
   );
 };
 

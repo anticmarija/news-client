@@ -4,6 +4,12 @@ import { findActiveCountryName } from "../../utils/helpers";
 import config from "../../config";
 import useDebounce from "../../hooks/use-debounce";
 import Thumbnail from "../thumbnail/Thumbnail";
+import { NewsWrapperStyle, MainHeaderStyle } from "../../style/Shared.style";
+import {
+  SearchWrapperStyle,
+  SearchInputStyle,
+  SearchingStatusStyle,
+} from "./Search.style";
 
 const apiHandler = async (activeCountry, searchingTerm) => {
   const response = await fetch(
@@ -39,27 +45,34 @@ const Search = () => {
       };
 
       asyncApiCall();
+    } else {
+      setResultArticles([]);
     }
   }, [debouncedSearchTerm, activeCountry]);
 
   const countryName = findActiveCountryName(supportedCountries, activeCountry);
 
   return (
-    <div>
-      <h1>Search top news from {countryName} by term:</h1>
-      <input
+    <SearchWrapperStyle>
+      <MainHeaderStyle>
+        Search top news from {countryName} by term:
+      </MainHeaderStyle>
+      <SearchInputStyle
         placeholder="Search term..."
         onChange={(event) => setSearchingTerm(event.target.value)}
-      ></input>
-      {searchingStatus && <p>Searching...</p>}
-      {isNthMatched && <p>No matches!</p>}
-      {resultArticles.map((article) => (
-        <Thumbnail
-          key={`${article.title}_${article.publishedAt}`}
-          article={article}
-        />
-      ))}
-    </div>
+      ></SearchInputStyle>
+      <SearchingStatusStyle show={searchingStatus || isNthMatched}>
+        {searchingStatus ? "Searching..." : isNthMatched && "Nothing matches!"}
+      </SearchingStatusStyle>
+      <NewsWrapperStyle>
+        {resultArticles.map((article) => (
+          <Thumbnail
+            key={`${article.title}_${article.publishedAt}`}
+            article={article}
+          />
+        ))}
+      </NewsWrapperStyle>
+    </SearchWrapperStyle>
   );
 };
 

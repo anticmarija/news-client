@@ -5,6 +5,7 @@ import { fetchArticles } from "../../store/actions/top-news.actions";
 import Thumbnail from "../thumbnail/Thumbnail";
 import Loader from "../loader/Loader";
 import { findActiveCountryName } from "../../utils/helpers";
+import { MainHeaderStyle, NewsWrapperStyle } from "../../style/Shared.style";
 
 const TopNews = () => {
   const { articles, loading } = useSelector((state) => state.topNews);
@@ -23,18 +24,18 @@ const TopNews = () => {
 
   return (
     <div>
-      <h1>Top news from {countryName}</h1>
+      <MainHeaderStyle>Top news from {countryName}</MainHeaderStyle>
       {loading ? (
         <Loader />
       ) : (
-        <div>
+        <NewsWrapperStyle>
           {articles?.map((article) => (
             <Thumbnail
               key={`${article.title}_${article.publishedAt}`}
               article={article}
             />
           ))}
-        </div>
+        </NewsWrapperStyle>
       )}
     </div>
   );

@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import "./App.css";
-
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 
 import Menu from "./components/menu/Menu";
@@ -17,6 +15,7 @@ import {
 import { setCategories } from "./store/actions/categories.actions";
 import Category from "./components/category/Category";
 import { findCountryIdInPathname } from "./utils/helpers";
+import Layout from "./components/layout/Layout";
 
 function App() {
   const dispatch = useDispatch();
@@ -45,28 +44,30 @@ function App() {
 
   return (
     activeCountry && (
-      <div className="App">
+      <div>
         <Menu />
-        <Switch>
-          <Route exact path="/">
-            <Redirect to={`/country/${activeCountry}`} />
-          </Route>
-          <Route path={`/country/:countryId/categories/:categoryName`}>
-            <Category />
-          </Route>
-          <Route path={`/country/:countryId/categories`}>
-            <Categories />
-          </Route>
-          <Route path={`/country/:countryId/search`}>
-            <Search />
-          </Route>
-          <Route path={`/country/:countryId/articles/:articleId`}>
-            <Article />
-          </Route>
-          <Route path="/country/:countryId">
-            <TopNews />
-          </Route>
-        </Switch>
+        <Layout>
+          <Switch>
+            <Route exact path="/">
+              <Redirect to={`/country/${activeCountry}/`} />
+            </Route>
+            <Route path={`/country/:countryId/categories/:categoryName`}>
+              <Category />
+            </Route>
+            <Route path={`/country/:countryId/categories`}>
+              <Categories />
+            </Route>
+            <Route path={`/country/:countryId/search`}>
+              <Search />
+            </Route>
+            <Route path={`/country/:countryId/articles/:articleId`}>
+              <Article />
+            </Route>
+            <Route path="/country/:countryId">
+              <TopNews />
+            </Route>
+          </Switch>
+        </Layout>
       </div>
     )
   );
