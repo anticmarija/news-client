@@ -37,6 +37,7 @@ export const ThumbnailDescStyle = styled.div`
 
   div {
     text-overflow: ellipsis;
+    overflow: hidden;
   }
 `;
 

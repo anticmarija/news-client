@@ -9,7 +9,7 @@ export const SearchWrapperStyle = styled.div`
 
 export const SearchInputStyle = styled.input`
   padding: 10px;
-  width: 400px;
+  width: 300px;
   height: 50px;
   background-color: #e7e9ec;
   border: none;

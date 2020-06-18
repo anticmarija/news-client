@@ -31,7 +31,9 @@ const Thumbnail = ({ article }) => {
               dispatch(setActiveArticle(article));
               dispatch(disableChangingCountries());
             }}
-            to={`/country/${activeCountry}/articles/${title}`}
+            to={`/country/${activeCountry}/articles/${encodeURIComponent(
+              title.toLowerCase().split(" ").join("-")
+            )}`}
           >
             More &gt;
           </Link>
