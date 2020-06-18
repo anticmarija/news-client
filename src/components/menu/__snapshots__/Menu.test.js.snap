@@ -42,13 +42,13 @@ exports[`Test Menu component should render correctly 1`] = `
     class="Menustyle__MenuCountriesWrapperStyle-sc-1neq1ee-4 hvGaFl"
   >
     <div
-      class="Menustyle__MenuItemStyle-sc-1neq1ee-2 crbfwz"
+      class="Menustyle__MenuItemStyle-sc-1neq1ee-2 cVYhuA"
     >
       <a
         active="active"
-        aria-current="page"
-        class="Menustyle__LinkStyle-sc-1neq1ee-3 ccUwVd active"
-        href="/"
+        class="Menustyle__LinkStyle-sc-1neq1ee-3 ccUwVd"
+        data-testid="country-link"
+        href="/gb/"
       >
         GB 
       </a>

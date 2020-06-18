@@ -52,6 +52,7 @@ exports[`Test Categories component should render correctly 1`] = `
             class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
           >
             <a
+              data-testid="more-link"
               href="/country/gb/articles/article1"
             >
               More &gt;
@@ -80,6 +81,7 @@ exports[`Test Categories component should render correctly 1`] = `
             class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
           >
             <a
+              data-testid="more-link"
               href="/country/gb/articles/article2"
             >
               More &gt;
@@ -131,6 +133,7 @@ exports[`Test Categories component should render correctly 1`] = `
             class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
           >
             <a
+              data-testid="more-link"
               href="/country/gb/articles/article3"
             >
               More &gt;
@@ -159,6 +162,7 @@ exports[`Test Categories component should render correctly 1`] = `
             class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
           >
             <a
+              data-testid="more-link"
               href="/country/gb/articles/article4"
             >
               More &gt;

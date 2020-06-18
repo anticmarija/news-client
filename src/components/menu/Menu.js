@@ -65,6 +65,7 @@ const Menu = () => {
             key={countryId}
           >
             <LinkStyle
+              data-testid="country-link"
               onClick={() => handleChangeCountry(countryId)}
               active={activeCountry === countryId ? "active" : ""}
               to={

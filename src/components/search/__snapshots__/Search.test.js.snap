@@ -13,6 +13,7 @@ exports[`Test Search component should render correctly 1`] = `
   </h1>
   <input
     class="Searchstyle__SearchInputStyle-sc-15swxjh-1 kMrTud"
+    data-testid="search-input"
     placeholder="Search term..."
   />
   <div

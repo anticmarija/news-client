@@ -26,6 +26,7 @@ const Thumbnail = ({ article }) => {
         <div>{description}</div>
         <ThumbnailLinkStyle>
           <Link
+            data-testid="more-link"
             onClick={() => {
               dispatch(setActiveArticle(article));
               dispatch(disableChangingCountries());

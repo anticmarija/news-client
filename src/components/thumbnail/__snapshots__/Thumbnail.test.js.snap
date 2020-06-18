@@ -22,6 +22,7 @@ exports[`Test Thumbnail component should render correctly 1`] = `
       class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
     >
       <a
+        data-testid="more-link"
         href="/country/gb/articles/title"
       >
         More &gt;

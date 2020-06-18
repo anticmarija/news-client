@@ -7,6 +7,7 @@ export const initialState = {
   countries: {
     supportedCountries: [{ countryId: "gb", countryName: "Gb" }],
     activeCountry: "gb",
+    isChangingCountriesEnabled: true,
   },
   categories: {
     allCategoryArticles: [

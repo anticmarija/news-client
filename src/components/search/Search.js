@@ -58,6 +58,7 @@ const Search = () => {
         Search top news from {countryName} by term:
       </MainHeaderStyle>
       <SearchInputStyle
+        data-testid="search-input"
         placeholder="Search term..."
         onChange={(event) => setSearchingTerm(event.target.value)}
       ></SearchInputStyle>
