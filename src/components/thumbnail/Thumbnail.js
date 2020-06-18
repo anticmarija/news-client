@@ -10,6 +10,7 @@ import {
   ThumbnailDescStyle,
 } from "./Thumbnail.style";
 import { setActiveArticle } from "../../store/actions/article.actions";
+import { disableChangingCountries } from "../../store/actions/countries.actions";
 
 const Thumbnail = ({ article }) => {
   const { activeCountry } = useSelector((state) => state.countries);
@@ -27,6 +28,7 @@ const Thumbnail = ({ article }) => {
           <Link
             onClick={() => {
               dispatch(setActiveArticle(article));
+              dispatch(disableChangingCountries());
             }}
             to={`/country/${activeCountry}/articles/${title}`}
           >

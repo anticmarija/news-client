@@ -27,7 +27,7 @@ export const MenuItemStyle = styled.div`
 
   a {
     text-decoration: none;
-    cursor: pointer;
+    cursor: ${(props) => (props.enabled ? "pointer" : "not-allowed")};
     color: black;
   }
 `;
