@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Menu component should render correctly 1`] = `
+<div
+  class="Menustyle__MenuWrapperStyle-sc-1neq1ee-0 kTCkyP"
+>
+  <div
+    class="Menustyle__MenuItemsWrapperStyle-sc-1neq1ee-1 eEekmm"
+  >
+    <div
+      class="Menustyle__MenuItemStyle-sc-1neq1ee-2 iJVOUw"
+    >
+      <a
+        class="Menustyle__LinkStyle-sc-1neq1ee-3 ccUwVd"
+        href="/country/gb/"
+      >
+        Top news
+      </a>
+    </div>
+    <div
+      class="Menustyle__MenuItemStyle-sc-1neq1ee-2 iJVOUw"
+    >
+      <a
+        class="Menustyle__LinkStyle-sc-1neq1ee-3 ccUwVd"
+        href="/country/gb/categories"
+      >
+        Categories
+      </a>
+    </div>
+    <div
+      class="Menustyle__MenuItemStyle-sc-1neq1ee-2 iJVOUw"
+    >
+      <a
+        class="Menustyle__LinkStyle-sc-1neq1ee-3 ccUwVd"
+        href="/country/gb/search"
+      >
+        Search
+      </a>
+    </div>
+  </div>
+  <div
+    class="Menustyle__MenuCountriesWrapperStyle-sc-1neq1ee-4 hvGaFl"
+  >
+    <div
+      class="Menustyle__MenuItemStyle-sc-1neq1ee-2 crbfwz"
+    >
+      <a
+        active="active"
+        aria-current="page"
+        class="Menustyle__LinkStyle-sc-1neq1ee-3 ccUwVd active"
+        href="/"
+      >
+        GB 
+      </a>
+    </div>
+  </div>
+</div>
+`;

@@ -1,17 +1,24 @@
 import React from "react";
-import App from "./App";
-import { mockedStore } from "./mocks/mockedStore";
+import Thumbnail from "./Thumbnail";
+import { mockedStore } from "../../mocks/mockedStore";
 import { Provider } from "react-redux";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
-describe("Test App component", () => {
+describe("Test Thumbnail component", () => {
   it("should render correctly", () => {
     const store = mockedStore();
+
     const { container } = render(
       <Provider store={store}>
         <MemoryRouter>
-          <App />
+          <Thumbnail
+            article={{
+              title: "title",
+              description: "desc",
+              urlToImage: "some-url",
+            }}
+          />
         </MemoryRouter>
       </Provider>
     );

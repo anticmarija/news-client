@@ -1,12 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Article component should render correctly without video 1`] = `
-<div>
-  <h1>
+exports[`Test Article component should render correctly 1`] = `
+<div
+  class="Articlestyle__ArticleWrapperStyle-sc-4uxgox-0 jucjTw"
+>
+  <h1
+    class="Sharedstyle__MainHeaderStyle-sc-1a3bnp9-0 chhIjm"
+  >
     active
   </h1>
   <img
     alt="active"
+    class="Articlestyle__ArticleImageStyle-sc-4uxgox-1 cWQfjr"
     src="https://i.dailymail.co.uk/1s/2020/06/17/16/29719992-0-image-a-23_1592408042536.jpg"
   />
   <p>

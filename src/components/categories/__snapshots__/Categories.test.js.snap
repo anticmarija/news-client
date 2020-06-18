@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Categories component should render correctly 1`] = `
+<div
+  class="Categoriesstyle__CategoriesWrapperStyle-sc-5h4rlm-0 eUa-dA-D"
+>
+  <h1
+    class="Sharedstyle__MainHeaderStyle-sc-1a3bnp9-0 chhIjm"
+  >
+    Top 5 news by categories from 
+    gb
+  </h1>
+  <div
+    class="CategoryHighlightsstyle__CategoryWrapperStyle-z5im9c-0 iSexGd"
+  >
+    <div
+      class="CategoryHighlightsstyle__CategoryTitleWrapper-z5im9c-2 jwXjQn"
+    >
+      <a
+        class="CategoryHighlightsstyle__CategoryLinkStyle-z5im9c-1 dKgQH"
+        href="/country/gb/categories/business"
+      >
+        business
+      </a>
+      <img
+        alt="arrow"
+        class="CategoryHighlightsstyle__ArrowIconStyle-z5im9c-4 cUoWuE"
+        src="arrow.svg"
+      />
+    </div>
+    <div
+      class="CategoryHighlightsstyle__CategoryArticlesStyle-z5im9c-3 jyTEzw"
+    >
+      <div
+        class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+      >
+        <h2
+          class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+        >
+          article1
+        </h2>
+        <div
+          class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
+        />
+        <div
+          class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 CqRvk"
+        >
+          <div>
+            some desc
+          </div>
+          <span
+            class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+          >
+            <a
+              href="/country/gb/articles/article1"
+            >
+              More &gt;
+            </a>
+          </span>
+        </div>
+      </div>
+      <div
+        class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+      >
+        <h2
+          class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+        >
+          article2
+        </h2>
+        <div
+          class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
+        />
+        <div
+          class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 CqRvk"
+        >
+          <div>
+            some desc
+          </div>
+          <span
+            class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+          >
+            <a
+              href="/country/gb/articles/article2"
+            >
+              More &gt;
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="CategoryHighlightsstyle__CategoryWrapperStyle-z5im9c-0 iSexGd"
+  >
+    <div
+      class="CategoryHighlightsstyle__CategoryTitleWrapper-z5im9c-2 jwXjQn"
+    >
+      <a
+        class="CategoryHighlightsstyle__CategoryLinkStyle-z5im9c-1 dKgQH"
+        href="/country/gb/categories/sports"
+      >
+        sports
+      </a>
+      <img
+        alt="arrow"
+        class="CategoryHighlightsstyle__ArrowIconStyle-z5im9c-4 cUoWuE"
+        src="arrow.svg"
+      />
+    </div>
+    <div
+      class="CategoryHighlightsstyle__CategoryArticlesStyle-z5im9c-3 jyTEzw"
+    >
+      <div
+        class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+      >
+        <h2
+          class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+        >
+          article3
+        </h2>
+        <div
+          class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
+        />
+        <div
+          class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 CqRvk"
+        >
+          <div>
+            some desc
+          </div>
+          <span
+            class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+          >
+            <a
+              href="/country/gb/articles/article3"
+            >
+              More &gt;
+            </a>
+          </span>
+        </div>
+      </div>
+      <div
+        class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+      >
+        <h2
+          class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+        >
+          article4
+        </h2>
+        <div
+          class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
+        />
+        <div
+          class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 CqRvk"
+        >
+          <div>
+            some desc
+          </div>
+          <span
+            class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+          >
+            <a
+              href="/country/gb/articles/article4"
+            >
+              More &gt;
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Search component should render correctly 1`] = `
+<div
+  class="Searchstyle__SearchWrapperStyle-sc-15swxjh-0 eEbpPg"
+>
+  <h1
+    class="Sharedstyle__MainHeaderStyle-sc-1a3bnp9-0 chhIjm"
+  >
+    Search top news from 
+    Gb
+     by term:
+  </h1>
+  <input
+    class="Searchstyle__SearchInputStyle-sc-15swxjh-1 kMrTud"
+    placeholder="Search term..."
+  />
+  <div
+    class="Searchstyle__SearchingStatusStyle-sc-15swxjh-2 dzlCMZ"
+  />
+  <div
+    class="Sharedstyle__NewsWrapperStyle-sc-1a3bnp9-1 jTferJ"
+  />
+</div>
+`;

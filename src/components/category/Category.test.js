@@ -1,17 +1,18 @@
 import React from "react";
-import App from "./App";
-import { mockedStore } from "./mocks/mockedStore";
+import Category from "./Category";
+import { mockedStore } from "../../mocks/mockedStore";
 import { Provider } from "react-redux";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
-describe("Test App component", () => {
+describe("Test Category component", () => {
   it("should render correctly", () => {
     const store = mockedStore();
+
     const { container } = render(
       <Provider store={store}>
         <MemoryRouter>
-          <App />
+          <Category />
         </MemoryRouter>
       </Provider>
     );

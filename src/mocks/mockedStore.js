@@ -6,8 +6,24 @@ export const initialState = {
   topNews: {},
   countries: {
     supportedCountries: [{ countryId: "gb", countryName: "Gb" }],
+    activeCountry: "gb",
   },
-  categories: {},
+  categories: {
+    allCategoryArticles: [
+      { title: "article1", description: "some desc" },
+      { title: "article2", description: "some desc" },
+    ],
+    categoryArticles: {
+      business: [
+        { title: "article1", description: "some desc" },
+        { title: "article2", description: "some desc" },
+      ],
+      sports: [
+        { title: "article3", description: "some desc" },
+        { title: "article4", description: "some desc" },
+      ],
+    },
+  },
   article: {
     activeArticle: {
       title: "active",

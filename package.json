@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --watchAll=false",
+    "test": "react-scripts test --env=jsdom --watchAll=false --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
@@ -81,7 +81,12 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!<rootDir>/node_modules/",
       "!src/index.js",
-      "!src/serviceWorker.js"
+      "!src/serviceWorker.js",
+      "!src/stories/**/*",
+      "!src/style/**/*",
+      "!src/**/*.style.{js,jsx,ts,tsx}",
+      "!src/store/index.js",
+      "!src/mocks/**/*"
     ],
     "coverageThreshold": {
       "global": {

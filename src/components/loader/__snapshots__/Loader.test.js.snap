@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Loader component should render correctly 1`] = `
+<div
+  class="Loaderstyle__LoaderWrapperStyle-sc-18hrjj-0 fhBkiV"
+>
+  <img
+    alt="loader"
+    src="[object Object]"
+  />
+</div>
+`;

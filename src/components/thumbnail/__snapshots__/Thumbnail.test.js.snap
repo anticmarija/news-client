@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Thumbnail component should render correctly 1`] = `
+<div
+  class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+>
+  <h2
+    class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+  >
+    title
+  </h2>
+  <div
+    class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 jrgXyZ"
+  />
+  <div
+    class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 CqRvk"
+  >
+    <div>
+      desc
+    </div>
+    <span
+      class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+    >
+      <a
+        href="/country/gb/articles/title"
+      >
+        More &gt;
+      </a>
+    </span>
+  </div>
+</div>
+`;
