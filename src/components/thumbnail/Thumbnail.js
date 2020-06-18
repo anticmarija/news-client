@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   ThumbnailWrapperStyle,
   ThumbnailImgStyle,
@@ -9,10 +9,13 @@ import {
   ThumbnailLinkStyle,
   ThumbnailDescStyle,
 } from "./Thumbnail.style";
+import { setActiveArticle } from "../../store/actions/article.actions";
 
 const Thumbnail = ({ article }) => {
   const { activeCountry } = useSelector((state) => state.countries);
   const { title, description, urlToImage } = article;
+
+  const dispatch = useDispatch();
 
   return (
     <ThumbnailWrapperStyle>
@@ -21,7 +24,12 @@ const Thumbnail = ({ article }) => {
       <ThumbnailDescStyle>
         <div>{description}</div>
         <ThumbnailLinkStyle>
-          <Link to={`/country/${activeCountry}/articles/:articleId`}>
+          <Link
+            onClick={() => {
+              dispatch(setActiveArticle(article));
+            }}
+            to={`/country/${activeCountry}/articles/${title}`}
+          >
             More &gt;
           </Link>
         </ThumbnailLinkStyle>

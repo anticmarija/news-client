@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 
 export const ThumbnailWrapperStyle = styled.div`
   width: 100%;
+  max-width: 500px;
   height: 400px;
   border: 2px solid #e7e9ec;
   border-radius: 5%;
