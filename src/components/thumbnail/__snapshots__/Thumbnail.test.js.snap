@@ -13,7 +13,7 @@ exports[`Test Thumbnail component should render correctly 1`] = `
     class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 jrgXyZ"
   />
   <div
-    class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 CqRvk"
+    class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
   >
     <div>
       desc

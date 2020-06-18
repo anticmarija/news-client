@@ -23,7 +23,7 @@ exports[`Test Category component should render correctly 1`] = `
         class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
       />
       <div
-        class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 CqRvk"
+        class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
       >
         <div>
           some desc
@@ -52,7 +52,7 @@ exports[`Test Category component should render correctly 1`] = `
         class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
       />
       <div
-        class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 CqRvk"
+        class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
       >
         <div>
           some desc
