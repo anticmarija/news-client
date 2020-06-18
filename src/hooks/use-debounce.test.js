@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, act } from "@testing-library/react";
 import useDebounce from "./use-debounce";
 
 jest.useFakeTimers();
@@ -30,11 +30,19 @@ const TestComponent = () => {
 it("should update value after specified delay has passed", () => {
   const { queryByTestId } = render(<TestComponent />);
 
-  fireEvent.change(queryByTestId("search-input"), { target: { value: "a" } });
-  fireEvent.change(queryByTestId("search-input"), { target: { value: "ab" } });
-  fireEvent.change(queryByTestId("search-input"), { target: { value: "abv" } });
+  act(() => {
+    fireEvent.change(queryByTestId("search-input"), { target: { value: "a" } });
+    fireEvent.change(queryByTestId("search-input"), {
+      target: { value: "ab" },
+    });
+    fireEvent.change(queryByTestId("search-input"), {
+      target: { value: "abv" },
+    });
+  });
 
-  jest.runAllTimers();
+  act(() => {
+    jest.runAllTimers();
+  });
 
   expect(mockFunction).toBeCalledTimes(1);
 });

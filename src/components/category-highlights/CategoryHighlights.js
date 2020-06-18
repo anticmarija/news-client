@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import PropTypes from "prop-types";
 import arrowIcon from "../../assets/arrow.svg";
 import {
@@ -9,6 +12,7 @@ import {
   CategoryArticlesStyle,
 } from "./CategoryHighlights.style";
 import Thumbnail from "../thumbnail/Thumbnail";
+import config from "../../config";
 
 const CategoryHighlights = ({ category, categoryArticles, activeCountry }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -30,12 +34,14 @@ const CategoryHighlights = ({ category, categoryArticles, activeCountry }) => {
       </CategoryTitleWrapper>
 
       <CategoryArticlesStyle isExpanded={isExpanded}>
-        {categoryArticles.map((article) => (
-          <Thumbnail
-            key={`${article.title}_${article.publishedAt}`}
-            article={article}
-          />
-        ))}
+        <Slider {...config.getSliderSettings()}>
+          {categoryArticles.map((article) => (
+            <Thumbnail
+              article={article}
+              key={`${article.titlge}_${article.publishedAt}`}
+            />
+          ))}
+        </Slider>
       </CategoryArticlesStyle>
     </CategoryWrapperStyle>
   );

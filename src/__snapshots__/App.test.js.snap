@@ -70,7 +70,37 @@ exports[`Test App component should render correctly 1`] = `
       </h1>
       <div
         class="Sharedstyle__NewsWrapperStyle-sc-1a3bnp9-1 jTferJ"
-      />
+      >
+        <div
+          class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+        >
+          <h2
+            class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+          >
+            article
+          </h2>
+          <div
+            class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 eTaMhC"
+          />
+          <div
+            class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
+          >
+            <div>
+              desc
+            </div>
+            <span
+              class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+            >
+              <a
+                data-testid="more-link"
+                href="/country/gb/articles/article"
+              >
+                More &gt;
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

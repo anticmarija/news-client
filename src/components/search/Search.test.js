@@ -2,11 +2,10 @@ import React from "react";
 import Search from "./Search";
 import { mockedStore } from "../../mocks/mockedStore";
 import { Provider } from "react-redux";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, act } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import useDebounce from "../../hooks/use-debounce";
 
-jest.mock("../../hooks/use-debounce");
+jest.useFakeTimers();
 
 const store = mockedStore();
 
@@ -23,7 +22,7 @@ describe("Test Search component", () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it("should search based on input", () => {
+  it("should fetch data only once in delay", () => {
     const { queryByTestId } = render(
       <Provider store={store}>
         <MemoryRouter>
@@ -31,8 +30,31 @@ describe("Test Search component", () => {
         </MemoryRouter>
       </Provider>
     );
-    fireEvent.change(queryByTestId("search-input"), { target: { value: "a" } });
 
-    expect(useDebounce).toBeCalledWith("a", 500);
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        json: jest
+          .fn()
+          .mockImplementation(() => Promise.resolve({ articles: [] })),
+      })
+    );
+
+    act(() => {
+      fireEvent.change(queryByTestId("search-input"), {
+        target: { value: "a" },
+      });
+      fireEvent.change(queryByTestId("search-input"), {
+        target: { value: "ab" },
+      });
+      fireEvent.change(queryByTestId("search-input"), {
+        target: { value: "abv" },
+      });
+    });
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    expect(window.fetch).toBeCalledTimes(1);
   });
 });

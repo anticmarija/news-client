@@ -11,10 +11,10 @@ exports[`Test Categories component should render correctly 1`] = `
     gb
   </h1>
   <div
-    class="CategoryHighlightsstyle__CategoryWrapperStyle-z5im9c-0 iSexGd"
+    class="CategoryHighlightsstyle__CategoryWrapperStyle-z5im9c-0 iEtGgc"
   >
     <div
-      class="CategoryHighlightsstyle__CategoryTitleWrapper-z5im9c-2 jwXjQn"
+      class="CategoryHighlightsstyle__CategoryTitleWrapper-z5im9c-2 bGYYXn"
     >
       <a
         class="CategoryHighlightsstyle__CategoryLinkStyle-z5im9c-1 dKgQH"
@@ -29,73 +29,109 @@ exports[`Test Categories component should render correctly 1`] = `
       />
     </div>
     <div
-      class="CategoryHighlightsstyle__CategoryArticlesStyle-z5im9c-3 jyTEzw"
+      class="CategoryHighlightsstyle__CategoryArticlesStyle-z5im9c-3 tmxij"
     >
       <div
-        class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+        class="slick-slider slick-initialized"
       >
-        <h2
-          class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
-        >
-          article1
-        </h2>
+        
         <div
-          class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
-        />
-        <div
-          class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
+          class="slick-list"
         >
-          <div>
-            some desc
-          </div>
-          <span
-            class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+          <div
+            class="slick-track"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
           >
-            <a
-              data-testid="more-link"
-              href="/country/gb/articles/article1"
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active slick-current"
+              data-index="0"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
             >
-              More &gt;
-            </a>
-          </span>
-        </div>
-      </div>
-      <div
-        class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
-      >
-        <h2
-          class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
-        >
-          article2
-        </h2>
-        <div
-          class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
-        />
-        <div
-          class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
-        >
-          <div>
-            some desc
+              <div>
+                <div
+                  class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+                >
+                  <h2
+                    class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+                  >
+                    article1
+                  </h2>
+                  <div
+                    class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
+                  />
+                  <div
+                    class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
+                  >
+                    <div>
+                      some desc
+                    </div>
+                    <span
+                      class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+                    >
+                      <a
+                        data-testid="more-link"
+                        href="/country/gb/articles/article1"
+                      >
+                        More &gt;
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active"
+              data-index="1"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+                >
+                  <h2
+                    class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+                  >
+                    article2
+                  </h2>
+                  <div
+                    class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
+                  />
+                  <div
+                    class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
+                  >
+                    <div>
+                      some desc
+                    </div>
+                    <span
+                      class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+                    >
+                      <a
+                        data-testid="more-link"
+                        href="/country/gb/articles/article2"
+                      >
+                        More &gt;
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <span
-            class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
-          >
-            <a
-              data-testid="more-link"
-              href="/country/gb/articles/article2"
-            >
-              More &gt;
-            </a>
-          </span>
         </div>
+        
+        
       </div>
     </div>
   </div>
   <div
-    class="CategoryHighlightsstyle__CategoryWrapperStyle-z5im9c-0 iSexGd"
+    class="CategoryHighlightsstyle__CategoryWrapperStyle-z5im9c-0 iEtGgc"
   >
     <div
-      class="CategoryHighlightsstyle__CategoryTitleWrapper-z5im9c-2 jwXjQn"
+      class="CategoryHighlightsstyle__CategoryTitleWrapper-z5im9c-2 bGYYXn"
     >
       <a
         class="CategoryHighlightsstyle__CategoryLinkStyle-z5im9c-1 dKgQH"
@@ -110,65 +146,101 @@ exports[`Test Categories component should render correctly 1`] = `
       />
     </div>
     <div
-      class="CategoryHighlightsstyle__CategoryArticlesStyle-z5im9c-3 jyTEzw"
+      class="CategoryHighlightsstyle__CategoryArticlesStyle-z5im9c-3 tmxij"
     >
       <div
-        class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+        class="slick-slider slick-initialized"
       >
-        <h2
-          class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
-        >
-          article3
-        </h2>
+        
         <div
-          class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
-        />
-        <div
-          class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
+          class="slick-list"
         >
-          <div>
-            some desc
-          </div>
-          <span
-            class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+          <div
+            class="slick-track"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
           >
-            <a
-              data-testid="more-link"
-              href="/country/gb/articles/article3"
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active slick-current"
+              data-index="0"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
             >
-              More &gt;
-            </a>
-          </span>
-        </div>
-      </div>
-      <div
-        class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
-      >
-        <h2
-          class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
-        >
-          article4
-        </h2>
-        <div
-          class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
-        />
-        <div
-          class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
-        >
-          <div>
-            some desc
+              <div>
+                <div
+                  class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+                >
+                  <h2
+                    class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+                  >
+                    article3
+                  </h2>
+                  <div
+                    class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
+                  />
+                  <div
+                    class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
+                  >
+                    <div>
+                      some desc
+                    </div>
+                    <span
+                      class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+                    >
+                      <a
+                        data-testid="more-link"
+                        href="/country/gb/articles/article3"
+                      >
+                        More &gt;
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active"
+              data-index="1"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  class="Thumbnailstyle__ThumbnailWrapperStyle-sc-123obdz-0 lhHvSI"
+                >
+                  <h2
+                    class="Thumbnailstyle__ThumbnailTitleStyle-sc-123obdz-3 dSnuxn"
+                  >
+                    article4
+                  </h2>
+                  <div
+                    class="Thumbnailstyle__ThumbnailImgStyle-sc-123obdz-1 cwXTzT"
+                  />
+                  <div
+                    class="Thumbnailstyle__ThumbnailDescStyle-sc-123obdz-2 dPDhAr"
+                  >
+                    <div>
+                      some desc
+                    </div>
+                    <span
+                      class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
+                    >
+                      <a
+                        data-testid="more-link"
+                        href="/country/gb/articles/article4"
+                      >
+                        More &gt;
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <span
-            class="Thumbnailstyle__ThumbnailLinkStyle-sc-123obdz-4 VvDHO"
-          >
-            <a
-              data-testid="more-link"
-              href="/country/gb/articles/article4"
-            >
-              More &gt;
-            </a>
-          </span>
         </div>
+        
+        
       </div>
     </div>
   </div>

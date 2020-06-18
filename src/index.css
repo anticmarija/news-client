@@ -20,3 +20,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  background: black;
+  border-radius: 50%;
+}

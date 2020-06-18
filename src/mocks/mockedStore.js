@@ -3,7 +3,16 @@ import thunk from "redux-thunk";
 
 const middlewares = [thunk];
 export const initialState = {
-  topNews: {},
+  topNews: {
+    articles: [
+      {
+        title: "article",
+        urlToImage:
+          "https://i.dailymail.co.uk/1s/2020/06/17/16/29719992-0-image-a-23_1592408042536.jpg",
+        description: "desc",
+      },
+    ],
+  },
   countries: {
     supportedCountries: [{ countryId: "gb", countryName: "Gb" }],
     activeCountry: "gb",

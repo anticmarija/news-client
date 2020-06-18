@@ -5,6 +5,8 @@ export const CategoryWrapperStyle = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  background: #e7e9ec;
+  border-bottom: 2px solid #fff;
 `;
 
 export const CategoryLinkStyle = styled(Link)`
@@ -23,6 +25,7 @@ export const CategoryLinkStyle = styled(Link)`
 export const CategoryTitleWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
+  background: #e7e9ec;
 
   &:hover {
     text-decoration: underline;
@@ -32,8 +35,9 @@ export const CategoryTitleWrapper = styled.div`
 export const CategoryArticlesStyle = styled.div`
   width: 100%;
   justify-content: space-between;
+  border-top 2px solid #fff;
 
-  display: ${(props) => (props.isExpanded ? "flex" : "none")};
+  display: ${(props) => (props.isExpanded ? "block" : "none")};
 `;
 
 export const ArrowIconStyle = styled.img`
