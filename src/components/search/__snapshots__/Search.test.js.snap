@@ -7,14 +7,17 @@ exports[`Test Search component should render correctly 1`] = `
   <h1
     class="Sharedstyle__MainHeaderStyle-sc-1a3bnp9-0 chhIjm"
   >
-    Search top news from 
-    Gb
-     by term:
+    search.header
+     
+    countries.gb
+     
+    search.byTerm
+    :
   </h1>
   <input
     class="Searchstyle__SearchInputStyle-sc-15swxjh-1 eqKNsS"
     data-testid="search-input"
-    placeholder="Search term..."
+    placeholder="search.placeholder"
   />
   <div
     class="Searchstyle__SearchingStatusStyle-sc-15swxjh-2 dzlCMZ"

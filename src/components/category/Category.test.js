@@ -5,6 +5,10 @@ import { Provider } from "react-redux";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({ t: (s) => s }),
+}));
+
 describe("Test Category component", () => {
   it("should render correctly", () => {
     const store = mockedStore();

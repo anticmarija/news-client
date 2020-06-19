@@ -11,8 +11,11 @@ import {
 } from "./Thumbnail.style";
 import { setActiveArticle } from "../../store/actions/article.actions";
 import { disableChangingCountries } from "../../store/actions/countries.actions";
+import { useTranslation } from "react-i18next";
 
 const Thumbnail = ({ article }) => {
+  const { t } = useTranslation();
+
   const { activeCountry } = useSelector((state) => state.countries);
   const { title, description, urlToImage } = article;
 
@@ -35,7 +38,7 @@ const Thumbnail = ({ article }) => {
               title.toLowerCase().split(" ").join("-")
             )}`}
           >
-            More &gt;
+            {t("thumbnail.readMore")} &gt;
           </Link>
         </ThumbnailLinkStyle>
       </ThumbnailDescStyle>

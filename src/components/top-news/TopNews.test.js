@@ -7,6 +7,10 @@ import { MemoryRouter } from "react-router-dom";
 
 const store = mockedStore();
 
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({ t: (s) => s }),
+}));
+
 describe("Test TopNews component", () => {
   it("should render correctly", () => {
     const { container } = render(

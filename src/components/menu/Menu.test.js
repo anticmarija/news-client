@@ -6,6 +6,10 @@ import { render, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import * as actions from "../../store/actions/countries.actions";
 
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({ t: (s) => s }),
+}));
+
 const store = mockedStore();
 
 describe("Test Menu component", () => {

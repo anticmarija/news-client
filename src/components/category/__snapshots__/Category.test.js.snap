@@ -5,7 +5,8 @@ exports[`Test Category component should render correctly 1`] = `
   <h1
     class="Sharedstyle__MainHeaderStyle-sc-1a3bnp9-0 chhIjm"
   >
-    Category 
+    category
+     
     
   </h1>
   <div
@@ -35,7 +36,8 @@ exports[`Test Category component should render correctly 1`] = `
             data-testid="more-link"
             href="/country/gb/articles/article1"
           >
-            More &gt;
+            thumbnail.readMore
+             &gt;
           </a>
         </span>
       </div>
@@ -64,7 +66,8 @@ exports[`Test Category component should render correctly 1`] = `
             data-testid="more-link"
             href="/country/gb/articles/article2"
           >
-            More &gt;
+            thumbnail.readMore
+             &gt;
           </a>
         </span>
       </div>

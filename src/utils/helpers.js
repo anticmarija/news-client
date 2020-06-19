@@ -17,14 +17,6 @@ export const findNewRoute = (pathname, selectedCountry) => {
   return routeArray.join("/");
 };
 
-export const findActiveCountryName = (supportedCountries, activeCountry) => {
-  const { countryName } = supportedCountries.find(
-    ({ countryId }) => countryId === activeCountry
-  );
-
-  return countryName;
-};
-
 export const capitalize = (s) => {
   if (typeof s !== "string") return "";
   return s.charAt(0).toUpperCase() + s.slice(1);

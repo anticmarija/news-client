@@ -7,8 +7,9 @@ exports[`Test Categories component should render correctly 1`] = `
   <h1
     class="Sharedstyle__MainHeaderStyle-sc-1a3bnp9-0 chhIjm"
   >
-    Top 5 news by categories from 
-    gb
+    categories.header
+     
+    countries.gb
   </h1>
   <div
     class="CategoryHighlightsstyle__CategoryWrapperStyle-z5im9c-0 iEtGgc"
@@ -74,7 +75,8 @@ exports[`Test Categories component should render correctly 1`] = `
                         data-testid="more-link"
                         href="/country/gb/articles/article1"
                       >
-                        More &gt;
+                        thumbnail.readMore
+                         &gt;
                       </a>
                     </span>
                   </div>
@@ -113,7 +115,8 @@ exports[`Test Categories component should render correctly 1`] = `
                         data-testid="more-link"
                         href="/country/gb/articles/article2"
                       >
-                        More &gt;
+                        thumbnail.readMore
+                         &gt;
                       </a>
                     </span>
                   </div>
@@ -191,7 +194,8 @@ exports[`Test Categories component should render correctly 1`] = `
                         data-testid="more-link"
                         href="/country/gb/articles/article3"
                       >
-                        More &gt;
+                        thumbnail.readMore
+                         &gt;
                       </a>
                     </span>
                   </div>
@@ -230,7 +234,8 @@ exports[`Test Categories component should render correctly 1`] = `
                         data-testid="more-link"
                         href="/country/gb/articles/article4"
                       >
-                        More &gt;
+                        thumbnail.readMore
+                         &gt;
                       </a>
                     </span>
                   </div>

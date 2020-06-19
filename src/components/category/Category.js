@@ -6,8 +6,11 @@ import Thumbnail from "../thumbnail/Thumbnail";
 import Loader from "../loader/Loader";
 import { MainHeaderStyle, NewsWrapperStyle } from "../../style/Shared.style";
 import { capitalize } from "../../utils/helpers";
+import { useTranslation } from "react-i18next";
 
 const Category = () => {
+  const { t } = useTranslation();
+
   let { activeCountry } = useSelector((state) => state.countries);
 
   let { categoryName } = useParams();
@@ -24,18 +27,23 @@ const Category = () => {
 
   return (
     <div>
-      <MainHeaderStyle>Category {capitalize(categoryName)}</MainHeaderStyle>
       {loadingAllCategoryArticles ? (
         <Loader />
       ) : (
-        <NewsWrapperStyle>
-          {allCategoryArticles.map((article) => (
-            <Thumbnail
-              key={`${article.title}_${article.publishedAt}`}
-              article={article}
-            />
-          ))}
-        </NewsWrapperStyle>
+        <>
+          <MainHeaderStyle>
+            {t("category")}&nbsp;
+            {capitalize(categoryName)}
+          </MainHeaderStyle>
+          <NewsWrapperStyle>
+            {allCategoryArticles.map((article) => (
+              <Thumbnail
+                key={`${article.title}_${article.publishedAt}`}
+                article={article}
+              />
+            ))}
+          </NewsWrapperStyle>
+        </>
       )}
     </div>
   );

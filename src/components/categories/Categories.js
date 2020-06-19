@@ -4,22 +4,20 @@ import { fetchTop5ArticlesPerCategory } from "../../store/actions/categories.act
 import Loader from "../loader/Loader";
 import { CategoriesWrapperStyle } from "./Categories.style";
 import { MainHeaderStyle } from "../../style/Shared.style";
-import { findActiveCountryName } from "../../utils/helpers";
 import CategoryHighlights from "../category-highlights/CategoryHighlights";
+import { useTranslation } from "react-i18next";
 
 const Categories = () => {
+  const { t } = useTranslation();
+
   const {
     supportedCategories,
     categoryArticles,
     loadingCategories,
   } = useSelector((state) => state.categories);
 
-  const { activeCountry, supportedCountries } = useSelector(
-    (state) => state.countries
-  );
+  const { activeCountry } = useSelector((state) => state.countries);
   const dispatch = useDispatch();
-
-  const countryName = findActiveCountryName(supportedCountries, activeCountry);
 
   useEffect(() => {
     dispatch(fetchTop5ArticlesPerCategory(activeCountry, supportedCategories));
@@ -31,7 +29,7 @@ const Categories = () => {
   ) : (
     <CategoriesWrapperStyle>
       <MainHeaderStyle>
-        Top 5 news by categories from {countryName}
+        {t("categories.header")} {t(`countries.${activeCountry}`)}
       </MainHeaderStyle>
       {Object.keys(categoryArticles).map((category) => {
         return (

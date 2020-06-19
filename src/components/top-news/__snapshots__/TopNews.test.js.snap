@@ -5,8 +5,9 @@ exports[`Test TopNews component should render correctly 1`] = `
   <h1
     class="Sharedstyle__MainHeaderStyle-sc-1a3bnp9-0 chhIjm"
   >
-    Top news from 
-    Gb
+    topNews.header
+     
+    countries.gb
   </h1>
   <div
     class="Sharedstyle__NewsWrapperStyle-sc-1a3bnp9-1 jTferJ"
@@ -35,7 +36,8 @@ exports[`Test TopNews component should render correctly 1`] = `
             data-testid="more-link"
             href="/country/gb/articles/article"
           >
-            More &gt;
+            thumbnail.readMore
+             &gt;
           </a>
         </span>
       </div>

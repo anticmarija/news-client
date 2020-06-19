@@ -11,8 +11,11 @@ import {
   LinkStyle,
 } from "./Menu.style";
 import { setActiveCountry } from "../../store/actions/countries.actions";
+import { useTranslation } from "react-i18next";
 
 const Menu = () => {
+  const { t } = useTranslation();
+
   const {
     supportedCountries,
     activeCountry,
@@ -36,7 +39,7 @@ const Menu = () => {
           active={pathname === `/country/${activeCountry}/`}
         >
           <LinkStyle exact to={`/country/${activeCountry}/`}>
-            Top news
+            {t("menu.topNews")}
           </LinkStyle>
         </MenuItemStyle>
         <MenuItemStyle
@@ -44,7 +47,7 @@ const Menu = () => {
           active={pathname === `/country/${activeCountry}/categories`}
         >
           <LinkStyle exact to={`/country/${activeCountry}/categories`}>
-            Categories
+            {t("menu.categories")}
           </LinkStyle>
         </MenuItemStyle>
         <MenuItemStyle
@@ -52,7 +55,7 @@ const Menu = () => {
           active={pathname === `/country/${activeCountry}/search`}
         >
           <LinkStyle exact to={`/country/${activeCountry}/search`}>
-            Search
+            {t("menu.search")}
           </LinkStyle>
         </MenuItemStyle>
       </MenuItemsWrapperStyle>

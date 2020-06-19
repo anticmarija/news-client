@@ -1,0 +1,24 @@
+{
+  "translation": {
+    "menu": {
+      "topNews": "Najvažnije vesti",
+      "categories": "Kategorije",
+      "search": "Pretraga"
+    },
+    "topNews": { "header": "Najvažnije vesti iz" },
+    "countries": {
+      "gb": "Velike Britanije",
+      "us": "SAD"
+    },
+    "thumbnail": { "readMore": "Više" },
+    "categories": { "header": "Pet najvažnijih vesti po kategorijama iz" },
+    "category": "Kategorija",
+    "search": {
+      "header": "Pretraga vesti iz ",
+      "byTerm": "po terminu",
+      "placeholder": "Unesi termin...",
+      "searching": "Pretraga...",
+      "nthMatched": "Ništa ne odgovara!"
+    }
+  }
+}

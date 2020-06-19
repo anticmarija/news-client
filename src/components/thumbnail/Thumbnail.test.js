@@ -7,6 +7,10 @@ import { MemoryRouter } from "react-router-dom";
 import * as actionsCountries from "../../store/actions/countries.actions";
 import * as actionsArticles from "../../store/actions/article.actions";
 
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({ t: (s) => s }),
+}));
+
 const store = mockedStore();
 
 describe("Test Thumbnail component", () => {

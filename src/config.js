@@ -3,7 +3,9 @@ const config = {
     return process.env.REACT_APP_API_KEY;
   },
   getApiBaseUrl() {
-    return process.env.REACT_APP_API_BASE_URL;
+    return process.env.REACT_APP_API_BASE_URL
+      ? process.env.REACT_APP_API_BASE_URL
+      : "https://newsapi.org/v2";
   },
   getCountries() {
     return [
@@ -51,6 +53,11 @@ const config = {
         },
       ],
     };
+  },
+  getLanguage() {
+    return process.env.REACT_APP_LANGUAGE
+      ? process.env.REACT_APP_LANGUAGE
+      : "en";
   },
 };
 

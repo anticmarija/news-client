@@ -9,6 +9,10 @@ jest.useFakeTimers();
 
 const store = mockedStore();
 
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({ t: (s) => s }),
+}));
+
 describe("Test Search component", () => {
   it("should render correctly", () => {
     const { container } = render(

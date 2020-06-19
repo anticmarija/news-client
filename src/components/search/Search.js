@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { findActiveCountryName } from "../../utils/helpers";
 import config from "../../config";
 import useDebounce from "../../hooks/use-debounce";
 import Thumbnail from "../thumbnail/Thumbnail";
@@ -10,6 +9,7 @@ import {
   SearchInputStyle,
   SearchingStatusStyle,
 } from "./Search.style";
+import { useTranslation } from "react-i18next";
 
 const apiHandler = async (activeCountry, searchingTerm) => {
   const response = await fetch(
@@ -20,9 +20,9 @@ const apiHandler = async (activeCountry, searchingTerm) => {
 };
 
 const Search = () => {
-  let { activeCountry, supportedCountries } = useSelector(
-    (state) => state.countries
-  );
+  const { t } = useTranslation();
+
+  let { activeCountry } = useSelector((state) => state.countries);
   const [searchingStatus, setSearchingStatus] = useState(false);
   const [searchingTerm, setSearchingTerm] = useState("");
   const [resultArticles, setResultArticles] = useState([]);
@@ -50,20 +50,21 @@ const Search = () => {
     }
   }, [debouncedSearchTerm, activeCountry]);
 
-  const countryName = findActiveCountryName(supportedCountries, activeCountry);
-
   return (
     <SearchWrapperStyle>
       <MainHeaderStyle>
-        Search top news from {countryName} by term:
+        {t("search.header")} {t(`countries.${activeCountry}`)}{" "}
+        {t("search.byTerm")}:
       </MainHeaderStyle>
       <SearchInputStyle
         data-testid="search-input"
-        placeholder="Search term..."
+        placeholder={t("search.placeholder")}
         onChange={(event) => setSearchingTerm(event.target.value)}
       ></SearchInputStyle>
       <SearchingStatusStyle show={searchingStatus || isNthMatched}>
-        {searchingStatus ? "Searching..." : isNthMatched && "Nothing matches!"}
+        {searchingStatus
+          ? t("search.searching")
+          : isNthMatched && t("search.nthMatched")}
       </SearchingStatusStyle>
       <NewsWrapperStyle>
         {resultArticles.map((article) => (

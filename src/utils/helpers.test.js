@@ -1,24 +1,6 @@
-import {
-  findActiveCountryName,
-  findNewRoute,
-  findCountryIdInPathname,
-  capitalize,
-} from "./helpers";
+import { findNewRoute, findCountryIdInPathname, capitalize } from "./helpers";
 
 describe("Test helpers functions", () => {
-  describe("findActiveCountryName()", () => {
-    it("should get active country's full name", () => {
-      const supportedCountries = [
-        { countryId: "gb", countryName: "Great Britain" },
-        { countryId: "gb", countryName: "Great Britain" },
-      ];
-
-      expect(findActiveCountryName(supportedCountries, "gb")).toBe(
-        "Great Britain"
-      );
-    });
-  });
-
   describe("findNewRoute()", () => {
     it("should get find new route based on current active country", () => {
       expect(findNewRoute("/country/us", "gb")).toBe("/country/gb");
